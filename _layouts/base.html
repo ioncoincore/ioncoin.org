@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    {% include layout/base/html-head.html %}
+</head>
+
+<body>
+    <header>
+        {% include layout/base/head-menu.html %}
+        {% if page.id != 'index' %}
+            {% include layout/base/head-submenu.html %}
+        {% endif %}
+    </header>
+
+    <main class="valign-wrapper">
+        <div class="container">
+            <div class="section">
+                {{ content }}
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer blue-grey lighten-5">
+        {% include layout/base/footer-menu.html %}
+    </footer>
+
+    {% include layout/base/footer-js.html %}
+</body>
+</html>

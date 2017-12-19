@@ -1,0 +1,27 @@
+# Site Settings
+title: "ion"
+title_separator: "-"
+description: "The ion coin technology paired with the ionomy gaming platform work hand in hand to create an ecosystem centered around gaming and digital goods."
+url: https://ioncoin.org
+baseurl: /
+
+# Reading Files
+exclude:
+    - vendor
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
+
+# Conversion
+markdown: kramdown
+
+# Sass/SCSS
+sass:
+    sass_dir: _sass
+    style: compressed
+
+# Plugins (previously gems:)
+plugins:
+    - jekyll-feed
+    - jekyll-sitemap

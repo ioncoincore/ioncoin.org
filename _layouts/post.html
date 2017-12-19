@@ -1,0 +1,15 @@
+---
+layout: base
+---
+<div class="container">
+        <div class="container section">
+            <small>{{ page.author }}</small>
+            <br>
+            <small class="grey-text">{{ page.date | date: "%-d %B %Y" }}</small>
+            <h3><b>{{ page.title }}</b></h3>
+            <article>
+                {{ content }}
+            </article>
+        </div>
+    </div>
+</div>

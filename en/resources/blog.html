@@ -1,0 +1,26 @@
+---
+layout: base
+title: Blog
+permalink: /blog
+---
+
+<div class="section">
+    <div class="center-align">
+        <a class="btn-subscribe btn-flat" href="{{ "/feed.xml" | prepend: site.url }}">Subscribe</a>
+    </div>
+</div>
+
+{% for post in site.posts %}
+    <div class="row">
+        <div class="col s12">
+            <a href="{{ post.url }}">
+                <div class="card-panel z-depth-0" style="border-color: #bdbdbd; border-style: solid; border-width: 0.5px;">
+                    <small style="color: rgba(0, 0, 0, 0.87);">{{ post.date | date: "%-d %B %Y" }}</small>
+                    <h5 style="color: rgba(0, 0, 0, 0.87);">{{ post.title }}</h5>
+                    <p style="color: rgba(0, 0, 0, 0.87);">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+                    <small style="color: rgba(0, 0, 0, 0.87);">Read more...</small>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endfor %}

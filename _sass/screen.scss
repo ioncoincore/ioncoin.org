@@ -1,0 +1,39 @@
+body {
+  background: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Sticky Footer */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Page Styles */
+.page-title-container {
+  background-color: #3d5afe !important;
+  height: 192px;
+}
+
+/* Blog Styles */
+.btn-subscribe {
+    border-color: #00bfa5;
+    border-style: solid;
+    border-width: 1px;
+    color: #00bfa5;
+}
+
+/* Blog Post Styles */
+article a:hover {
+    color: #37474f
+}
