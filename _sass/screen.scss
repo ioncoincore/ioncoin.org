@@ -25,7 +25,7 @@ main {
   height: 192px;
 }
 
-/* Blog Styles */
+/* Blog Page Styles */
 .btn-subscribe {
     border-color: #00bfa5;
     border-style: solid;
@@ -33,7 +33,25 @@ main {
     color: #00bfa5;
 }
 
-/* Blog Post Styles */
+/* Blog Post Page Styles */
 article a:hover {
     color: #37474f
+}
+
+/* Open Source Page Styles */
+.contributors div {
+    padding: 8px 0;
+    width: 215px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+}
+.contributors div div {
+    width: auto;
+    padding: 0;
+}
+.contributors div div:first-child+div {
+    max-width: 150px;
+    margin: 0 2px;
+    white-space: nowrap;
 }

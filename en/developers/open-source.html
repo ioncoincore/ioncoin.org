@@ -20,6 +20,18 @@ permalink: /open-source
                 <a href="https://github.com/ionomy/ion">Source Code</a>
             </div>
         </div>
+        <div>
+            <h4>ion Core Contributors</h4>
+            <p>(Ordered by number of commits)</p>
+            <div class="contributors">
+                {% for c in site.corecontributors %}
+                    <div>
+                        <div><a{% if c.login %} href="https://github.com/{{c.login}}"{% endif %}>{{ c.name | htmlescape }}</a></div>
+                        <div>({{ c.contributions }})</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
     <div class="col s12 m6">
         <div class="card small">
@@ -34,6 +46,18 @@ permalink: /open-source
             </div>
             <div class="card-action center-align">
                 <a href="https://github.com/ioncoin-dot-org/ioncoin.org">Source Code</a>
+            </div>
+        </div>
+        <div>
+            <h4>ioncoin.org Contributors</h4>
+            <p>(Ordered by number of commits)</p>
+            <div class="contributors">
+                {% for c in site.sitecontributors %}
+                    <div>
+                        <div><a{% if c.login %} href="https://github.com/{{c.login}}"{% endif %}>{{ c.name | htmlescape }}</a></div>
+                        <div>({{ c.contributions }})</div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
