@@ -4,8 +4,9 @@
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#remote-procedure-calls-rpcs">Remote Procedure Calls (RPCs)</a>
         <ul style="padding-left: 30px;">
-            <li><a href="#getblockcount">GetBlockCount</a></li>
-            <li><a href="#getblockhash">GetBlockHash</a></li>
+            {% for rpc in site.data.rpc %}
+                <li><a href="#{{ rpc.anchor }}">{{ rpc.name }}</a></li>
+            {% endfor %}
         </ul>
     </li>
 </ul>

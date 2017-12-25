@@ -16,46 +16,30 @@
         </div>
     </div>
     <div class="divider"></div>
-    <div class="row">
-        <div class="col m6">
-            <h5 id="getblockcount">GetBlockCount</h5>
-            <p>The getblockcount RPC returns the number of blocks in the local best block chain.</p>
-            <small>Arguments</small>
-            <table>
-                <tr>
-                    <td class="center-align">No arguments...</td>
-                </tr>
-            </table>
-            <h6>Returns</h6>
-            <p>The number of blocks in the local best block chain. For a new node with only the hardcoded genesis block, this number will be 0.</p>
+    {% for rpc in site.data.rpc %}
+        <div class="row">
+            <div class="col m6">
+                <h5 id="{{ rpc.anchor }}">{{ rpc.name }}</h5>
+                <p>{{ rpc.description }}</p>
+                {% for argument in rpc.arguments %}
+                    <small>Arguments</small>
+                    <table>
+                        <tr>
+                            <td class="right-align" style="width: 20%;"><small><b>{{ argument.name }}</b><br>{{ argument.type }}<br>{{ argument.presence | upcase }}</small></td>
+                            <td>{{ argument.argument_description }}</td>
+                        </tr>
+                    </table>
+                {% endfor %}
+                <h6>Returns</h6>
+                <p>{{ rpc.returns }}</p>
+            </div>
+            <div class="col m6 code-example">
+                <h6>Example Request</h6>
+                <pre class="grey darken-4 white-text"><code><span>{{ rpc.example_request }}</span></code></pre>
+                <h6>Example Response</h6>
+                <pre class="grey darken-4 white-text"><code><span>{{ rpc.example_response}}</span></code></pre>
+            </div>
         </div>
-        <div class="col m6 code-example">
-            <h6>Example Request</h6>
-            <pre class="grey darken-4 white-text"><code><span>iond getblockcount</span></code></pre>
-            <h6>Example Response</h6>
-            <pre class="grey darken-4 white-text"><code><span>315280</span></code></pre>
-        </div>
-    </div>
-    <div class="divider"></div>
-    <div class="row">
-        <div class="col m6">
-            <h5 id="getblockhash">GetBlockHash</h5>
-            <p>The getblockhash RPC returns the header hash of a block at the given height in the local best block chain.</p>
-            <small>Arguments</small>
-            <table>
-                <tr>
-                    <td class="right-align" style="width: 20%;"><small><b>Block Height</b><br>number (int)<br>REQUIRED</small></td>
-                    <td>The height of the block whose header hash should be returned. The height of the hardcoded genesis block is 0</td>
-                </tr>
-            </table>
-            <h6>Returns</h6>
-            <p>The hash of the block at the requested height, encoded as hex in RPC byte order, or JSON null if an error occurred.</p>
-        </div>
-        <div class="col m6 code-example">
-            <h6>Example Request</h6>
-            <pre class="grey darken-4 white-text"><code><span>iond getblockhash 240886</span></code></pre>
-            <h6>Example Response</h6>
-            <pre class="grey darken-4 white-text"><code><span>510f5ff2667f27ff8583554b513a37b9ae6ae755aa8a9f2f841280e6ab005b2a</span></code></pre>
-        </div>
-    </div>
+        <div class="divider"></div>
+    {% endfor %}
 </div>

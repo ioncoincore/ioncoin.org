@@ -1,0 +1,22 @@
+-
+    name: GetBlockCount
+    anchor: getblockcount
+    description: The getblockcount RPC returns the number of blocks in the local best block chain.
+    arguments:
+    returns: The number of blocks in the local best block chain. For a new node with only the hardcoded genesis block, this number will be 0.
+    example_request: iond getblockcount
+    example_response: 315280
+
+-
+    name: GetBlockHash
+    anchor: getblockhash
+    description: The getblockhash RPC returns the header hash of a block at the given height in the local best block chain.
+    arguments:
+        -
+            name: Block Height
+            type: number (int)
+            presence: required
+            argument_description: The height of the block whose header hash should be returned. The height of the hardcoded genesis block is 0.
+    returns: The hash of the block at the requested height, encoded as hex in RPC byte order, or JSON null if an error occurred.
+    example_request: iond getblockhash 240886
+    example_response: 510f5ff2667f27ff8583554b513a37b9ae6ae755aa8a9f2f841280e6ab005b2a
