@@ -20,3 +20,12 @@
     returns: The hash of the block at the requested height, encoded as hex in RPC byte order, or JSON null if an error occurred.
     example_request: iond getblockhash 240886
     example_response: 510f5ff2667f27ff8583554b513a37b9ae6ae755aa8a9f2f841280e6ab005b2a
+
+-
+    name: GetDifficulty
+    anchor: getdifficulty
+    description: The getdifficulty RPC.
+    arguments:
+    returns: The difficulty of creating a block with the same target threshold (nBits) as the highest-height block in the local best block chain. The number is a a multiple of the minimum difficulty.
+    example_request: iond getdifficulty
+    example_response: "1.00000000"
