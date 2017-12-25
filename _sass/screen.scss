@@ -51,6 +51,17 @@ article a:hover {
 }
 
 /* Documentation Space */
+.documentation-portal {
+    padding-left: 300px;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width : 992px) {
+    .documentation-portal {
+        padding-left: 0;
+    }
+}
+
 .no-hover > a:hover {
     background-color: transparent !important;
 }
