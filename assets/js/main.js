@@ -9,6 +9,8 @@
             outDuration: 250
         });
 
+        $('.materialboxed').materialbox();
+
         $('.sidenav').sidenav();
 
         $('.tooltipped').tooltip();
