@@ -29,3 +29,12 @@
     returns: The difficulty of creating a block with the same target threshold (nBits) as the highest-height block in the local best block chain. The number is a a multiple of the minimum difficulty.
     example_request: iond getdifficulty
     example_response: "1.00000000"
+
+-
+    name: Stop
+    anchor: stop
+    description: The stop RPC safely shuts down the ion Core server.
+    arguments:
+    returns: The string "Ion server stopping”.
+    example_request: iond stop
+    example_response: Ion server stopping
