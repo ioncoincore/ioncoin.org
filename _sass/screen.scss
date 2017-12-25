@@ -49,3 +49,14 @@ article a:hover {
     margin: 0 2px;
     white-space: nowrap;
 }
+
+/* Documentation Space */
+.no-hover > a:hover {
+    background-color: transparent !important;
+}
+
+.code-example > pre {
+    font-family: "Source Code Pro", monospace;
+    padding: 20px 40px;
+    border-radius: 5px;
+}
