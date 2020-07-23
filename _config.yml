@@ -24,6 +24,7 @@ sass:
 # Plugins (previously gems:)
 plugins:
     - jekyll-feed
+    - jekyll-redirect-from
     - jekyll-sitemap
 
 aliases:

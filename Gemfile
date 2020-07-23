@@ -5,6 +5,7 @@ gem "github-pages", "~> 205", group: :jekyll_plugins
 # Plugins
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.13"
+  gem "jekyll-redirect-from", "~> 0.15"
   gem "jekyll-sitemap", "~> 1.4"
 end
 
